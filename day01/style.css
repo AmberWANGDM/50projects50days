@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  /* 设置字体 */
+  /* font-family: 'Muli', sans-serif; */
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.panel {
+  position: relative;
+  /* 缩小可以这样设置  
+    flex-grow: 0.5;
+    flex-shrink: 1;
+    flex-basis: 0%; */
+  flex: 0.5;
+  height: 80vh;
+  margin: 5px;
+  /* 背景图 */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50px;
+  /* 渐变 */
+  transition: flex 1s;
+  cursor: pointer;
+}
+
+.panel.active {
+  /* 变胖可以这样设置 */
+  flex: 5
+}
+
+.panel>h3 {
+  position: absolute;
+  left: 30px;
+  bottom: 20px;
+  color: white;
+  font-style: 24px;
+  opacity: 0;
+}
+
+.panel.active>h3 {
+  /* 注意渐变加的位置 */
+  transition: opacity .5s ease-in 0.4s;
+  opacity: 1;
+}
