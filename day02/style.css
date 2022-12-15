@@ -1,0 +1,99 @@
+/* 设置变量 */
+:root {
+  --line-border-fill: #3498db;
+  --line-border-empty: #e0e0e0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 350px;
+  /* 居中 */
+  text-align: center;
+}
+
+.progress-container {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* 伪元素 */
+.progress-container::before {
+  /* 必须有content */
+  position: absolute;
+  content: '';
+  background-color: var(--line-border-empty);
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  /* flex子元素且z-index不为auto创建层叠上下文, 可以在circle的background下面 */
+  z-index: -1;
+}
+
+/* 进度条 */
+.progress {
+  position: absolute;
+  background-color: var(--line-border-fill);
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 0%;
+  z-index: -1;
+  transition: width 0.5s ease-in;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 3px solid var(--line-border-empty);
+  border-radius: 50%;
+  background-color: white;
+}
+
+.circle.active {
+  transition: border 0.1s ease-in-out 0.5s;
+  border: 3px solid var(--line-border-fill);
+}
+
+.btn {
+  background-color: var(--line-border-fill);
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 8px 30px;
+  margin: 5px;
+  font-size: 14px;
+}
+
+/* 点击时缩放 */
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:disabled {
+  background-color: var(--line-border-empty);
+  cursor: not-allowed;
+}
