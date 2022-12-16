@@ -72,3 +72,27 @@ panels.forEach((panel) => {
 ```
 ## js
 按钮绑定事件, 控制circle元素上active类的添加与删除, 控制进度条长度, 通过一个变量控制按钮是否可点击
+
+# day03 rotaring nav
+## css
+ 1. `+` 相邻兄弟选择器
+`former_element + target_element { style properties }`
+
+2. 导航栏移出移入效果
+```css
+nav ul li {
+  /* 大写 */
+  text-transform: uppercase;
+  color: white;
+  margin: 40px 0;
+  /* 移出屏幕 */
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in;
+}
+
+/* 回到屏幕显示 */
+.container.show-nav+nav li {
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+```
