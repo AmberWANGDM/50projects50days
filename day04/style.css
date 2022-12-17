@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #715ee9;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  /* display: flex; */
+  /* align-items: center; */
+  position: relative;
+  /* width: 200px; */
+  height: 50px
+}
+
+.search input[type="text"] {
+  /* 清除样式 */
+  outline: none;
+  border: none;
+  background-image: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding-left: 15px;
+  height: 50px;
+  width: 50px;
+  transition: width 0.3s ease-in;
+  font-size: 18px;
+}
+
+.search.active>.input {
+  width: 200px;
+}
+
+.btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  /* 注意动画添加的属性 */
+  transition: transform 0.3s ease-in;
+  background-color: #fff;
+}
+
+.search.active>.btn {
+  transform: translateX(200px);
+}
+
+.btn>i {
+  font-size: 24px;
+}
