@@ -96,3 +96,26 @@ nav ul li {
   transition-delay: 0.3s;
 }
 ```
+
+# day04
+## css
+input设置padding后,width设为0也会有一部分padding露出
+
+解决
+
+button浮动,盖住input
+
+# day05 blurry loading
+
+## css
+
+align-items设为center前提是该container有高度
+
+## js
+
+当一个变量变化会引起多个地方变化,且变化范围不一致, 用以下公式即可
+```js
+function scale(num, inMin, inMax, outMin, outMax) {
+  return ((num - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin
+}
+```
