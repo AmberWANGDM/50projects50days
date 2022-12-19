@@ -119,3 +119,15 @@ function scale(num, inMin, inMax, outMin, outMax) {
   return ((num - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin
 }
 ```
+
+# day 06 下拉显示动画
+
+## js
+
+监听scroll事件, 获取每个方块顶部距离视口的长度, 如果小于视口高度的五分之四,就显示
+
+api: window.innerHeight 浏览器视口高度
+
+element.getBoundingClientRect().top
+
+![](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect/element-box-diagram.png)
