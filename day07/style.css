@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  background-color: #efedd8;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+
+}
+
+h1 {
+  color: #fff;
+  font-size: 30px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.buy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  padding: 10px;
+  background-color: transparent;
+  border: 3px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
+}
+
+.buy:hover {
+  background-color: #5754e4;
+  border: #5754e4 1px solid
+}
+
+.left,
+.right {
+  position: absolute;
+  width: 50%;
+  height: 100vh;
+  transition: width 0.7s ease-in-out;
+  overflow: hidden;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.left {
+  background-image: url('ps.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.right {
+  background-image: url('xbox.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.left::before {
+  content: '';
+  background-color: rgba(122, 121, 180, 0.4);
+  /* position: absolute; */
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.right::before {
+  content: '';
+  display: block;
+  background-color: rgba(94, 94, 101, 0.4);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.hover-left .left,
+.hover-right .right {
+  width: 70%;
+}
+
+.hover-left .right,
+.hover-right .left {
+  width: 30%;
+}

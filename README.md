@@ -7,3 +7,4 @@
 |  04   | hidden-search-widget | [day04预览](https://amberwangdm.github.io/50projects50days/day04/) |
 |  05   |    blurry-loading    | [day05预览](https://amberwangdm.github.io/50projects50days/day05/) |
 |  06   |   scroll-animation   | [day06预览](https://amberwangdm.github.io/50projects50days/day06/) |
+|  07   |  split-landing-page  | [day07预览](https://amberwangdm.github.io/50projects50days/day07/) |

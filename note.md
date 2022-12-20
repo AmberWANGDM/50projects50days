@@ -131,3 +131,29 @@ api: window.innerHeight 浏览器视口高度
 element.getBoundingClientRect().top
 
 ![](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect/element-box-diagram.png)
+
+
+# day07
+
+## css
+
+蒙版效果: 使用before伪元素(position:absolute会使inline元素变为块级)设置alpha实现,但是会遮挡标题和按钮, 需要给这两个元素设置浮动
+
+回忆一下在同一个层叠上下文中: 正z-index > z-index:0 > 内联元素 > 浮动 > 块级 > 负z-index > border > background
+
+什么元素会创建层叠上下文 
+
+- html
+- position 为 relative, absolute, 且 z-index 不为auto 的元素
+- fixed, sticky 元素
+- flex子元素 且 z-index 不为auto
+- grid子元素 且 z-index 不为auto
+- 以下属性值不为none的元素
+  - transform
+  - filter (day05 filter:blur(0px))
+
+## js
+
+在左右两个盒子外面包裹一个container, 在容器上增加或移除hover-left/hover-right类.
+
+ 分别给两个盒子绑定mouseenter, mouseleave事件, 移入左盒子, 左盒子(.hover-left .left)放大, 右盒子(.hover-left .right)缩小, 移入右盒子同理
