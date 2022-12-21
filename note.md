@@ -157,3 +157,7 @@ element.getBoundingClientRect().top
 在左右两个盒子外面包裹一个container, 在容器上增加或移除hover-left/hover-right类.
 
  分别给两个盒子绑定mouseenter, mouseleave事件, 移入左盒子, 左盒子(.hover-left .left)放大, 右盒子(.hover-left .right)缩小, 移入右盒子同理
+
+ #day 08 
+  
+ 实现input的提示语上浮动画, 将单词拆分为span包裹的字母并设定transition-delay, input focus事件文字上移, `transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55)`
