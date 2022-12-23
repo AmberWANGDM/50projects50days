@@ -161,3 +161,11 @@ element.getBoundingClientRect().top
  # day 08 
   
  实现input的提示语上浮动画, 将单词拆分为span包裹的字母并设定transition-delay, input focus事件文字上移, `transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55)`
+
+ # day09
+
+ audio标签相关api play() pause() currentTime
+
+# day10
+
+fetch请求 `fetch(url,config).then(res=>res.json()).then(data=>{/* ... */})`
