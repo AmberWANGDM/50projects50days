@@ -11,3 +11,4 @@
 |  08   |   form-input-wave    | [day08预览](https://amberwangdm.github.io/50projects50days/day08/) |
 |  09   |     sound-board      | [day09预览](https://amberwangdm.github.io/50projects50days/day09/) |
 |  10   |      dad-jokes       | [day10预览](https://amberwangdm.github.io/50projects50days/day10/) |
+|  11   |    event-keycode     | [day10预览](https://amberwangdm.github.io/50projects50days/day10/) |

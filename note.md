@@ -169,3 +169,7 @@ element.getBoundingClientRect().top
 # day10
 
 fetch请求 `fetch(url,config).then(res=>res.json()).then(data=>{/* ... */})`
+
+# DAY11 
+
+监听键盘事件,获取keycode
